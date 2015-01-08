@@ -1,0 +1,23 @@
+
+Tested with yices-2.2.2
+
+see http://enricopilz.de/2015/01/08/send-more-money.html
+
+Usage:
+
+> cat common.smt example1.smt | yices-smt2
+sat
+((a 9) (b 8) (c 4) (d 7) (e 1) (f 0) (g 3) (h 2) (i 6) (j 5))
+
+> cat common.smt example2.smt | yices-smt2
+sat
+((a 6) (b 1) (c 8) (d 3) (e 2) (f 0) (g 5) (h 9) (i 4) (j 7))
+
+> cat common.smt example3.smt | yices-smt2
+sat
+((a 2) (b 0) (c 4) (d 7) (e 3) (f 6) (g 5) (h 1) (i 8) (j 9))
+
+> yices-smt2 send-money.smt
+sat
+((m 1) (o 0) (n 6) (e 5) (y 2))
+
